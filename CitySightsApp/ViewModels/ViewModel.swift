@@ -12,6 +12,7 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     
+    @Published var locationState = CLAuthorizationStatus.notDetermined
     @Published var restaurants = [Businesses]()
     @Published var sights = [Businesses]()
     
@@ -30,6 +31,8 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     // Checking what user tapped
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+        locationState = locationManager.authorizationStatus
         
         if locationManager.authorizationStatus == .authorizedAlways || locationManager.authorizationStatus == .authorizedWhenInUse {
             
@@ -64,7 +67,7 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         urlCopmonents?.queryItems = [
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
-            URLQueryItem(name: "index", value: String(6)),
+            URLQueryItem(name: "limit", value: String(6)),
             URLQueryItem(name: "categories", value: category)
         ]
         
@@ -86,7 +89,15 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                 
                 do {
                     let data = try decoder.decode(BusinessSearch.self, from: data!)
-                    
+                    // Sort Data (km away)
+                    var businesses = data.businesses
+                    businesses.sorted { b1, b2 in
+                        return b1.distance ?? 0 < b2.distance ?? 0
+                    }
+                    // Image function (url = actual Image)
+                    for b in businesses {
+                        b.getImageUrl()
+                    }
                     DispatchQueue.main.async {
 //                        if category == Constants.sightsKey {
 //                            self.sights = data.businesses
@@ -95,9 +106,9 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 //                        }
                         switch category {
                         case Constants.sightsKey:
-                            self.sights = data.businesses
+                            self.sights = businesses
                         case Constants.restuarantsKey:
-                            self.restaurants = data.businesses
+                            self.restaurants = businesses
                         default:
                             break
                         }

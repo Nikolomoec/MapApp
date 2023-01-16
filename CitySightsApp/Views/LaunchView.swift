@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct LaunchView: View {
+    
+    @EnvironmentObject var model: ViewModel
+    
     var body: some View {
        
-        Text("")
+        if model.locationState == .notDetermined {
+            
+        } else if model.locationState == .authorizedAlways || model.locationState == .authorizedWhenInUse {
+            
+            HomeView()
+            
+        } else {
+            
+        }
         
     }
 }
@@ -18,5 +30,6 @@ struct LaunchView: View {
 struct LaunchView_Previews: PreviewProvider {
     static var previews: some View {
         LaunchView()
+            .environmentObject(ViewModel())
     }
 }
