@@ -11,8 +11,10 @@
 		5A69C5AE29746716005E5F09 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5AD29746716005E5F09 /* LaunchView.swift */; };
 		5A69C5B029746718005E5F09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A69C5AF29746718005E5F09 /* Assets.xcassets */; };
 		5A69C5B429746718005E5F09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A69C5B329746718005E5F09 /* Preview Assets.xcassets */; };
-		5A69C5BE2974680E005E5F09 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5BD2974680E005E5F09 /* Model.swift */; };
+		5A69C5BE2974680E005E5F09 /* BusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5BD2974680E005E5F09 /* BusinessModel.swift */; };
 		5A69C5C02974681B005E5F09 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5BF2974681B005E5F09 /* ViewModel.swift */; };
+		5A69C5C32974A08D005E5F09 /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5C22974A08D005E5F09 /* BusinessSearch.swift */; };
+		5A69C5C72975B4E1005E5F09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5C62975B4E1005E5F09 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +24,11 @@
 		5A69C5AF29746718005E5F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A69C5B129746718005E5F09 /* CitySightsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CitySightsApp.entitlements; sourceTree = "<group>"; };
 		5A69C5B329746718005E5F09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5A69C5BD2974680E005E5F09 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5A69C5BD2974680E005E5F09 /* BusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessModel.swift; sourceTree = "<group>"; };
 		5A69C5BF2974681B005E5F09 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5A69C5C129746B06005E5F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5A69C5C22974A08D005E5F09 /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
+		5A69C5C62975B4E1005E5F09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				5A69C5BB2974678C005E5F09 /* Views */,
 				5A69C5BC29746794005E5F09 /* ViewModels */,
 				5A69C5BA29746785005E5F09 /* Models */,
+				5A69C5C52975B4D0005E5F09 /* Helpers */,
 				5A69C5AF29746718005E5F09 /* Assets.xcassets */,
 				5A69C5B129746718005E5F09 /* CitySightsApp.entitlements */,
 				5A69C5B229746718005E5F09 /* Preview Content */,
@@ -80,7 +85,8 @@
 		5A69C5BA29746785005E5F09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5A69C5BD2974680E005E5F09 /* Model.swift */,
+				5A69C5BD2974680E005E5F09 /* BusinessModel.swift */,
+				5A69C5C22974A08D005E5F09 /* BusinessSearch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +105,14 @@
 				5A69C5BF2974681B005E5F09 /* ViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5A69C5C52975B4D0005E5F09 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5A69C5C62975B4E1005E5F09 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A69C5BE2974680E005E5F09 /* Model.swift in Sources */,
+				5A69C5BE2974680E005E5F09 /* BusinessModel.swift in Sources */,
 				5A69C5AE29746716005E5F09 /* LaunchView.swift in Sources */,
 				5A69C5C02974681B005E5F09 /* ViewModel.swift in Sources */,
+				5A69C5C32974A08D005E5F09 /* BusinessSearch.swift in Sources */,
 				5A69C5AC29746716005E5F09 /* CitySightsApp.swift in Sources */,
+				5A69C5C72975B4E1005E5F09 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
