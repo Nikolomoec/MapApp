@@ -22,6 +22,7 @@
 		5A69C5D62975C682005E5F09 /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5D52975C682005E5F09 /* BusinessRow.swift */; };
 		5A69C5D92976C284005E5F09 /* BusinessDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5D82976C284005E5F09 /* BusinessDetail.swift */; };
 		5A69C5DB2976C5C4005E5F09 /* Closed:OpenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5DA2976C5C4005E5F09 /* Closed:OpenState.swift */; };
+		5A69C5DE29773B75005E5F09 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5DD29773B75005E5F09 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		5A69C5D52975C682005E5F09 /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 		5A69C5D82976C284005E5F09 /* BusinessDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetail.swift; sourceTree = "<group>"; };
 		5A69C5DA2976C5C4005E5F09 /* Closed:OpenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Closed:OpenState.swift"; sourceTree = "<group>"; };
+		5A69C5DD29773B75005E5F09 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5A69C5CC2975B8DF005E5F09 /* HomeView.swift */,
+				5A69C5DC29773B49005E5F09 /* Map */,
 				5A69C5CE2975BF03005E5F09 /* List */,
 			);
 			path = Home;
@@ -174,6 +177,14 @@
 				5A69C5DA2976C5C4005E5F09 /* Closed:OpenState.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		5A69C5DC29773B49005E5F09 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5A69C5DD29773B75005E5F09 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				5A69C5C02974681B005E5F09 /* ViewModel.swift in Sources */,
 				5A69C5C32974A08D005E5F09 /* BusinessSearch.swift in Sources */,
 				5A69C5D92976C284005E5F09 /* BusinessDetail.swift in Sources */,
+				5A69C5DE29773B75005E5F09 /* MapView.swift in Sources */,
 				5A69C5D02975BF11005E5F09 /* BusinessList.swift in Sources */,
 				5A69C5D22975C416005E5F09 /* Business section header.swift in Sources */,
 				5A69C5D42975C4FD005E5F09 /* BusinessSection.swift in Sources */,

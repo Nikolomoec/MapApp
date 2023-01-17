@@ -24,7 +24,13 @@ struct HomeView: View {
                             Image(systemName: "location")
                             Text("San Francisco")
                             Spacer()
-                            Text("Button switch")
+                            Button {
+                                isMapShowing = true
+                            } label: {
+                                Text("Switch to a Map")
+                            }
+                            .tint(.black)
+
                         }
                         
                         Divider()
@@ -34,7 +40,8 @@ struct HomeView: View {
                     .padding([.horizontal, .top])
                 } else {
                     
-                    
+                    MapView()
+                        .ignoresSafeArea()
                     
                 }
             }
