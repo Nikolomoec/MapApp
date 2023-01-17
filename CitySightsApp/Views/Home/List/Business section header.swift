@@ -20,9 +20,3 @@ struct Business_section_header: View {
     }
     }
 }
-
-struct Business_section_header_Previews: PreviewProvider {
-    static var previews: some View {
-        Business_section_header(title: "rest")
-    }
-}

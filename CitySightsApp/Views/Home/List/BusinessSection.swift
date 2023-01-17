@@ -16,7 +16,11 @@ struct BusinessSection: View {
         Section(content: {
             ForEach(businesses) { business in
                 
-                BusinessRow(business: business)
+                NavigationLink {
+                    BusinessDetail(business: business)
+                } label: {
+                    BusinessRow(business: business)
+                }
             }
         }, header: {
             Business_section_header(title: title)

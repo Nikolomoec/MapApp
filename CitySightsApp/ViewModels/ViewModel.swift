@@ -91,7 +91,7 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                     let data = try decoder.decode(BusinessSearch.self, from: data!)
                     // Sort Data (km away)
                     var businesses = data.businesses
-                    businesses.sorted { b1, b2 in
+                    businesses.sort { (b1, b2) -> Bool in
                         return b1.distance ?? 0 < b2.distance ?? 0
                     }
                     // Image function (url = actual Image)

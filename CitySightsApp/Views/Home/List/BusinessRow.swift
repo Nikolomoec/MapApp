@@ -15,12 +15,12 @@ struct BusinessRow: View {
         VStack (alignment: .leading) {
             HStack {
                 //Image Url
-                let UiImage = UIImage(data: business.imageData ?? Data())
-                Image(uiImage: UiImage ?? UIImage())
+                let UiImageMain = UIImage(data: business.imageData ?? Data())
+                Image(uiImage: UiImageMain ?? UIImage())
                     .resizable()
-                    .scaledToFit()
                     .frame(width: 58, height: 58)
                     .cornerRadius(5)
+                    .scaledToFit()
                 
                 VStack (alignment: .leading) {
                     
@@ -42,6 +42,7 @@ struct BusinessRow: View {
             }
             Divider()
         }
+        .tint(.black)
     }
 }
 
