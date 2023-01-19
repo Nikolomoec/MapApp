@@ -40,13 +40,35 @@ struct HomeView: View {
                     }
                     .padding([.horizontal, .top])
                 } else {
-                    
-                    MapView(selectedBusiness: $selectedBusiness)
-                        .ignoresSafeArea()
-                        .sheet(item: $selectedBusiness) { business in
-                            BusinessDetail(business: business)
+                    ZStack (alignment: .top) {
+                        
+                        MapView(selectedBusiness: $selectedBusiness)
+                            .ignoresSafeArea()
+                            .sheet(item: $selectedBusiness) { business in
+                                BusinessDetail(business: business)
+                            }
+                        
+                        ZStack {
+                        Rectangle ()
+                            .foregroundColor(.white)
+                            .cornerRadius(5)
+                            .frame(height: 48)
+                            HStack {
+                                Image(systemName: "location")
+                                Text("locationData")
+                                
+                                Spacer()
+                                
+                                Button {
+                                    self.isMapShowing = false
+                                } label: {
+                                    Text("Switch to List View")
+                                }
+                            }
+                            .padding()
                         }
-                    
+                        .padding()
+                    }
                 }
             }
             
