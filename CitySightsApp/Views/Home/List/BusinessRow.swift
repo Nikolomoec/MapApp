@@ -40,7 +40,8 @@ struct BusinessRow: View {
                 }
                 
             }
-            Divider()
+            DashedDivider()
+                .padding(.vertical)
         }
         .tint(.black)
     }

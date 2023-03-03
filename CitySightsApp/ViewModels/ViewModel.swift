@@ -15,6 +15,7 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var locationState = CLAuthorizationStatus.notDetermined
     @Published var restaurants = [Businesses]()
     @Published var sights = [Businesses]()
+    @Published var placemark: CLPlacemark?
     
     override init() {
         
@@ -22,9 +23,11 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         
         locationManager.delegate = self
         
+    }
+    
+    func requestGeolocation() {
         // Request user for Location Info (also add property in info plst)
         locationManager.requestWhenInUseAuthorization()
-        
     }
     
     // MARK: - Location Manager Delegate Methods
@@ -52,6 +55,14 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         if userLocation != nil {
             // Stops Updating Location
             locationManager.stopUpdatingLocation()
+            
+            // Get a City of the user
+            let geoCoder = CLGeocoder()
+            geoCoder.reverseGeocodeLocation(userLocation!) { placemarks, error in
+                if error == nil && placemarks != nil {
+                    self.placemark = placemarks?.first
+                }
+            }
             
             // Sending Location to Yelp API
             getBusinesses(Constants.sightsKey, userLocation!)

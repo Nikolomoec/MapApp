@@ -23,6 +23,12 @@
 		5A69C5D92976C284005E5F09 /* BusinessDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5D82976C284005E5F09 /* BusinessDetail.swift */; };
 		5A69C5DB2976C5C4005E5F09 /* Closed:OpenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5DA2976C5C4005E5F09 /* Closed:OpenState.swift */; };
 		5A69C5DE29773B75005E5F09 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5DD29773B75005E5F09 /* MapView.swift */; };
+		5A69C5E029796753005E5F09 /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5DF29796753005E5F09 /* DirectionsView.swift */; };
+		5A69C5E2297967F7005E5F09 /* BusinessDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5E1297967F7005E5F09 /* BusinessDesc.swift */; };
+		5A69C5E429796EEB005E5F09 /* DirectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5E329796EEB005E5F09 /* DirectionsMap.swift */; };
+		5A69C5E82979C1B8005E5F09 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5E72979C1B8005E5F09 /* OnboardingView.swift */; };
+		5A69C5EA2979CA95005E5F09 /* DeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5E92979CA95005E5F09 /* DeniedView.swift */; };
+		5A69C5EC2979CFCF005E5F09 /* DashedDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69C5EB2979CFCF005E5F09 /* DashedDivider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,12 @@
 		5A69C5D82976C284005E5F09 /* BusinessDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetail.swift; sourceTree = "<group>"; };
 		5A69C5DA2976C5C4005E5F09 /* Closed:OpenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Closed:OpenState.swift"; sourceTree = "<group>"; };
 		5A69C5DD29773B75005E5F09 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5A69C5DF29796753005E5F09 /* DirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
+		5A69C5E1297967F7005E5F09 /* BusinessDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDesc.swift; sourceTree = "<group>"; };
+		5A69C5E329796EEB005E5F09 /* DirectionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsMap.swift; sourceTree = "<group>"; };
+		5A69C5E72979C1B8005E5F09 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		5A69C5E92979CA95005E5F09 /* DeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeniedView.swift; sourceTree = "<group>"; };
+		5A69C5EB2979CFCF005E5F09 /* DashedDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedDivider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5A69C5C62975B4E1005E5F09 /* Constants.swift */,
+				5A69C5EB2979CFCF005E5F09 /* DashedDivider.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -137,6 +150,7 @@
 		5A69C5C82975B865005E5F09 /* Denied */ = {
 			isa = PBXGroup;
 			children = (
+				5A69C5E92979CA95005E5F09 /* DeniedView.swift */,
 			);
 			path = Denied;
 			sourceTree = "<group>";
@@ -144,6 +158,7 @@
 		5A69C5C92975B86F005E5F09 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				5A69C5E72979C1B8005E5F09 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -175,6 +190,7 @@
 			children = (
 				5A69C5D82976C284005E5F09 /* BusinessDetail.swift */,
 				5A69C5DA2976C5C4005E5F09 /* Closed:OpenState.swift */,
+				5A69C5E1297967F7005E5F09 /* BusinessDesc.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -183,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				5A69C5DD29773B75005E5F09 /* MapView.swift */,
+				5A69C5DF29796753005E5F09 /* DirectionsView.swift */,
+				5A69C5E329796EEB005E5F09 /* DirectionsMap.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -260,16 +278,22 @@
 				5A69C5BE2974680E005E5F09 /* BusinessModel.swift in Sources */,
 				5A69C5D62975C682005E5F09 /* BusinessRow.swift in Sources */,
 				5A69C5CD2975B8DF005E5F09 /* HomeView.swift in Sources */,
+				5A69C5E82979C1B8005E5F09 /* OnboardingView.swift in Sources */,
 				5A69C5AE29746716005E5F09 /* LaunchView.swift in Sources */,
 				5A69C5C02974681B005E5F09 /* ViewModel.swift in Sources */,
 				5A69C5C32974A08D005E5F09 /* BusinessSearch.swift in Sources */,
 				5A69C5D92976C284005E5F09 /* BusinessDetail.swift in Sources */,
+				5A69C5EA2979CA95005E5F09 /* DeniedView.swift in Sources */,
+				5A69C5E029796753005E5F09 /* DirectionsView.swift in Sources */,
+				5A69C5EC2979CFCF005E5F09 /* DashedDivider.swift in Sources */,
+				5A69C5E2297967F7005E5F09 /* BusinessDesc.swift in Sources */,
 				5A69C5DE29773B75005E5F09 /* MapView.swift in Sources */,
 				5A69C5D02975BF11005E5F09 /* BusinessList.swift in Sources */,
 				5A69C5D22975C416005E5F09 /* Business section header.swift in Sources */,
 				5A69C5D42975C4FD005E5F09 /* BusinessSection.swift in Sources */,
 				5A69C5AC29746716005E5F09 /* CitySightsApp.swift in Sources */,
 				5A69C5C72975B4E1005E5F09 /* Constants.swift in Sources */,
+				5A69C5E429796EEB005E5F09 /* DirectionsMap.swift in Sources */,
 				5A69C5DB2976C5C4005E5F09 /* Closed:OpenState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +435,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -451,7 +475,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;

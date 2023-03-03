@@ -10,6 +10,7 @@ import SwiftUI
 struct BusinessDetail: View {
     
     var business: Businesses
+    @State private var showDirections = false
     
     var body: some View {
         
@@ -30,23 +31,12 @@ struct BusinessDetail: View {
             .ignoresSafeArea()
             // Desc
             Group {
-                    Text(business.name ?? "")
-                        .font(.largeTitle)
-                        .padding(.leading)
                     
-                    if business.location?.displayAddress != nil {
-                        ForEach(business.location!.displayAddress!, id: \.self) { address in
-                            Text(address)
-                                .padding(.leading)
-                        }
-                    
-                }
-                // Rating Stars
-                
-                Image("regular_\(business.rating ?? 0)")
+                BusinessDesc(business: business)
                     .padding()
                 
-                Divider()
+                DashedDivider()
+                    .padding(.horizontal)
                 
                 Group {
                     //Phone
@@ -66,7 +56,8 @@ struct BusinessDetail: View {
                     }
                     .padding()
                     
-                    Divider()
+                    DashedDivider()
+                        .padding(.horizontal)
                     // Reviews
                     HStack {
                         
@@ -84,7 +75,8 @@ struct BusinessDetail: View {
                     }
                     .padding()
                     
-                    Divider()
+                    DashedDivider()
+                        .padding(.horizontal)
                     // Website
                     HStack {
                         
@@ -102,10 +94,11 @@ struct BusinessDetail: View {
                     }
                     .padding()
                 }
-                Divider()
-            // Directions Button
+                DashedDivider()
+                    .padding(.horizontal)
+                
                 Button {
-                    
+                    showDirections = true
                 } label: {
                     ZStack {
                         Rectangle()
@@ -118,7 +111,9 @@ struct BusinessDetail: View {
                     }
                 }
                 .padding()
-                
+                .sheet(isPresented: $showDirections) {
+                    DirectionsView(business: business)
+                }
 
             }
         }

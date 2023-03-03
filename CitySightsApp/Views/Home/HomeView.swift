@@ -23,12 +23,13 @@ struct HomeView: View {
                     VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "location")
-                            Text("San Francisco")
+                            Text(model.placemark?.locality ?? "")
                             Spacer()
                             Button {
                                 isMapShowing = true
                             } label: {
                                 Text("Switch to a Map")
+                                    .foregroundColor(.blue)
                             }
                             .tint(.black)
 
@@ -55,7 +56,7 @@ struct HomeView: View {
                             .frame(height: 48)
                             HStack {
                                 Image(systemName: "location")
-                                Text("locationData")
+                                Text(model.placemark?.locality ?? "")
                                 
                                 Spacer()
                                 
